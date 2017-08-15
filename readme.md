@@ -4,8 +4,7 @@
 ## Cache-Control
 > 使用场景: http 1.1，优先级高于 Expires
 
-* Cache-Control <可缓存性>, <到期>
-* <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control"></a>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control">Cache-Control <可缓存性>, <到期></a>
 * public - 表明响应可以被任何对象（包括：发送请求的客户端，代理服务器，等等）缓存。
 * private - 表明响应只能被单个用户缓存，不能作为共享缓存（即代理服务器不能缓存它）。
 * no-cache - 强制所有缓存了该响应的缓存用户，在使用已存储的缓存数据前，发送带验证器的请求到原始服务器
@@ -17,13 +16,13 @@
 * min-fresh=<seconds> 表示客户端希望在指定的时间内获取最新的响应。
 
 ## Expires
-> 使用场景: http 1.1
+> 使用场景: http 1.0
 
-Expires: "<day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT"
+Expires: "\<day-name\>, \<day\> \<month\> \<year\> \<hour\>:\<minute\>:\<second\> GMT"
 
 ## Last-Modify
 
-Last-Modified: "<day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT"
+Last-Modified: "\<day-name\>, \<day\> \<month\> \<year\> \<hour\>:\<minute\>:\<second\> GMT"
 
 在响应头中设置 `Last-Modified`， 浏览器在接收到后，会在请求头中设置 `If-Modified-Since`
 
