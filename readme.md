@@ -19,11 +19,11 @@
 ## Expires
 > 使用场景: http 1.1
 
-Expires: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+Expires: "<day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT"
 
 ## Last-Modify
 
-Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+Last-Modified: "<day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT"
 
 在响应头中设置 `Last-Modified`， 浏览器在接收到后，会在请求头中设置 `If-Modified-Since`
 
