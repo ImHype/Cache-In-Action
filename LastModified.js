@@ -6,13 +6,13 @@ http.createServer(function (req, res) {
 		res.end('<script src="/index.js"></script>');
 	} else {
 		var ifModifySince = req.headers['if-modified-since'];
+		console.log(ifModifySince)
 		var diffTime = Date.now() - new Date(ifModifySince).getTime();
 
 		if (diffTime > 1000) {
 			res.statusCode = 304;
 			res.end('');	
 		} else {
-			res.setHeader('Cache-Control', 'public');
 			res.setHeader('Last-Modified', 'Tue, 15 Aug 2017 11:53:24 GMT');
 			res.end('Fine!');	
 		}
